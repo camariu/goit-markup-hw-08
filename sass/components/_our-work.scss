@@ -1,0 +1,40 @@
+@media screen and (max-width: 1200px) {
+  .ourwork {
+    display: none;
+  }
+}
+
+.ourwork {
+  background-color: var(--white-color);
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1, 16;
+    color: var(--black-color);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 94px;
+  }
+}
+.our-activities {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 94px;
+
+  &__text {
+    position: relative;
+    width: 370px;
+    height: 70px;
+    background: var(--what-we-do-overlay);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 16px;
+    color: var(--white-color);
+    bottom: 74px;
+  }
+}

@@ -1,0 +1,204 @@
+.modal {
+  background: var(--modal-background);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &__inner {
+    width: 450px;
+    height: 609px;
+    background: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid var(--regular-color);
+    background: var(--white-color);
+    color: var(--black-color);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+  }
+  &__button:focus {
+    fill: var(--blue-color);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: var(--black-color);
+    padding-bottom: 14px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: var(--main-color);
+  }
+  &__items svg {
+    position: absolute;
+    top: 33px;
+    left: 10px;
+  }
+
+  &__icons {
+    fill: var(--black-color);
+  }
+  &__items-terms {
+    height: 14px;
+    width: 400px;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    gap: 9px;
+    position: relative;
+    right: 24px;
+  }
+
+  &__input {
+    width: 370px;
+    height: 40px;
+    border: 1px solid var(--regular-color);
+    border-radius: 4px;
+    margin-top: 4px;
+    padding-left: 42px;
+    outline: none;
+    cursor: pointer;
+  }
+  &__input:focus {
+    border: 1px solid var(--blue-color);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__items input:focus + svg {
+    fill: var(--blue-color);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__text-area {
+    width: 370px;
+    height: 120px;
+    border: 1px solid var(--regular-color);
+    border-radius: 4px;
+    margin-top: 4px;
+    padding-left: 16px;
+    padding-top: 12px;
+    resize: none;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__text-area:focus {
+    border: 1px solid var(--blue-color);
+  }
+  &__items-terms input[type="checkbox"]:checked + .checkbox__replace {
+    background: var(--blue-color);
+    border-color: var(--blue-color);
+
+    &__items-terms input[type="checkbox"] {
+      display: none;
+    }
+    &__items input[type="checkbox"]:checked + .checkbox__replace svg {
+      opacity: 1;
+    }
+  }
+}
+.checkbox {
+  visibility: hidden;
+  &__replace {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--black-color);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__svg {
+    fill: var(--white-color);
+  }
+  &__link {
+    color: var(--blue-color);
+  }
+  &__button {
+    background: var(--blue-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    letter-spacing: 0.06em;
+    padding: 10px 80px;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    color: var(--white-color);
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    cursor: pointer;
+  }
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+@media screen and (min-width: 1200px) {
+  .modal__inner {
+    width: 528px;
+    height: 581px;
+  }
+  .form__input {
+    width: 448px;
+  }
+  .form__text-area {
+    width: 448px;
+  }
+  .form__items-terms {
+    display: flex;
+    flex-direction: row;
+    gap: 9px;
+    position: relative;
+    left: 2px;
+  }
+  .checkbox {
+    visibility: hidden;
+  }
+
+  .checkbox__button {
+    margin-bottom: 40px;
+  }
+}

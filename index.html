@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebStudio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    
+    <link rel="stylesheet" href="./css/main.min.css"/>
+  </head>
+  <body>
+    <!--Modal-->
+    <div data-modal class="modal is-hidden">
+      <div class="modal__inner">
+        <button data-modal-close class="modal__button">
+          <svg height="11px" height="11px">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+        </button>
+        <h2 class="modal__title">Leave your information and we'll call you back</h2>
+        <form class="form" name="contact-form">
+          <label class="form__items ">
+            Name
+            <input class="form__input" type="text" name="name">
+            <svg class="form__icon" height="12" width="12">
+              <use href="./images/symbol-defs.svg#name" ></use>
+            </svg>
+          </label>
+          <label class="form__items">
+            Telephone
+            <input class="form__input" type="tel" name="telephone">
+            <svg  class="form__icon"  height="13" width="13">
+              <use href="./images/symbol-defs.svg#tel" ></use>
+            </svg>
+          </label>
+          <label class="form__items ">
+            E-mail
+            <input class="form__input" type="mail" name="mail">
+            <svg  class="form__icon"  height="12" width="15">
+              <use href="./images/symbol-defs.svg#mail" ></use>
+            </svg>
+          </label>
+          <label class="form__items">
+            Comments
+            <textarea class="form__text-area" placeholder="Enter the text" name="comments"></textarea>
+          </label>
+          <label class="form__items-terms">
+              <input type="checkbox" class="checkbox" >
+              <span class="checkbox__replace">
+                 <svg  width="16" height="15" class="checkbox__svg ">
+                    <use href="./images/symbol-defs.svg#icon-therm" ></use>
+                 </svg>
+               </span>
+              I agree with the letter and accept the<a class="checkbox__link" href="#">Terms and Conditions</a>
+          </label>
+          <button class="checkbox__button" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <!--Header-->
+      <header class="header">
+        <div class="container-inner header-inner">
+          <a class="header__logo" href="/">Web</a>
+          <nav class="header__nav menu">
+            <ul class="navigation-list" class="unstyled-list">
+              <li class="navigation-list__items">
+                <a class=" navigation-list__link active-link" href="./index.html">Studio</a>
+              </li>
+              <li class="navigation-list__items">
+                <a class=" navigation-list__link" href="./portofolio.html"
+                  >Portfolio</a
+                >
+              </li>
+              <li class="navigation-list__items">
+                <a class=" navigation-list__link" href="#">Contacts</a>
+              </li>
+            </ul>
+
+            <ul class="navigation-second  menu unstyled-list">
+              <li class="navigation-second__contact">
+                <a class="navigation-second__list" href="#">
+                  <svg class="navigation-second__svg" width="16" height="12">
+                    <use href="./images/symbol-defs.svg#icon-mail"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="navigation-second__contact">
+                <a class="navigation-second__list" href="#">
+                  <svg class="navigation-second__svg" width="10" height="16">
+                    <use href="./images/symbol-defs.svg#icon-telefon"></use>
+                  </svg>
+                  +1 212-772-4150
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
+          <svg width="24"height="24">
+           <use href="./images/symbol-defs.svg#icon-menu"> </use>
+          </svg>
+        </button>
+        </div>
+      </header>
+
+      <main>
+       <!--hero Section-->
+       <section class="hero">
+        <div class="container-inner ">
+          <div class="hero__div">
+            <h1 class="hero__title">EFFECTIVE SOLUTIONS FOR YOUR BUSINESS</h1>
+            <button data-modal-open class="hero__button">Request our service</button>
+          </div>
+        </div>
+      </section>
+        <!--Middle Section-->
+        <section class="middle-section">
+          <div class="container-inner ">
+            <ul class="unstyled-list cards-mid">
+              <li class="cards-mid__list">
+                <a class="cards-mid__svg-background" href="#">
+                  <svg height="70" width="65.31">
+                    <use
+                      href="./images/symbol-defs.svg#icon-antenna-1-1-1"
+                    ></use>
+                  </svg>
+                </a>
+                <h3 class="cards-mid__subtitle">ATTENTION TO DETAILS</h3>
+                <p class="cards-mid__text">
+                  We go into all the details and processes
+                  of your business to
+                  develop a customized solution.
+                </p>
+              </li>
+              <li class="cards-mid__list cards-mid--punctuality">
+                <a class="cards-mid__svg-background" href="#">
+                  <svg height="70" width="66.90">
+                    <use
+                      href="./images/symbol-defs.svg#icon-clock-1-1-1-1"
+                    ></use>
+                  </svg>
+                </a>
+                <h3 class="cards-mid__subtitle ">PUNCTUALITY</h3>
+                <p class="cards-mid__text ">
+                  With us, you can feel safe and secure.
+                  An important principle of the company:
+                  respect your time and deadlines.
+                </p>
+              </li>
+              <li class="cards-mid__list" >
+                <a class="cards-mid__svg-background" href="#">
+                  <svg height="53,69" width="70">
+                    <use
+                      href="./images/symbol-defs.svg#icon-diagram-1-1-1"
+                    ></use>
+                  </svg>
+                </a>
+                <h3 class="cards-mid__subtitle">PLANNING</h3>
+                <p class="cards-mid__text">
+                  You will be able to observe and 
+                  participate in every phase of solution development and
+                  implementation.
+                </p>
+              </li>
+              <li class="cards-mid__list">
+                <a class="cards-mid__svg-background" href="#">
+                  <svg height="60.66" width="54.83">
+                    <use
+                      href="./images/symbol-defs.svg#icon-astronaut-1-1-2"
+                    ></use>
+                  </svg>
+                </a>
+                <h3 class="cards-mid__subtitle">MODERN TECHNOLOGIES</h3>
+                <p class="cards-mid__text">
+                  We use innovative tools to solve
+                  assigned tasks. It's time to simplify work
+                  processes.
+                </p>
+              </li>
+            </ul>
+        </section>
+        <!--Our Work Section-->
+        <section class="ourwork">
+          <div class="container-inner">
+            <h2 class="ourwork__title">What we do</h2>
+            <ul class="unstyled-list our-activities">
+              <li class="our-activities__items">
+                <img
+                  width="370"
+                  src="./images/Gadgeturi (1).jpg"
+                  alt="Gadgeturi 1"
+                />
+                <p class="our-activities__text">DESKTOP APPS</p>
+              </li class="our-activities__items">
+              <li>
+                <img
+                  width="370"
+                  src="./images/Gadgeturi (2).jpg"
+                  alt="Gadgeturi 2"
+                />
+                <p class="our-activities__text">Mobile APPS</p>
+              </li>
+              <li class="our-activities__items">
+                <img
+                  width="370"
+                  src="./images/Gadgeturi (3).jpg"
+                  alt="Gadgeturi  3"
+                />
+                <p class="our-activities__text">DESIGN SOLUTIONS</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!--Our Time Section-->
+        <section class="ourtime-section">
+          <div class="container-inner ">
+            <h2 class="ourtime-section__title">Our Team</h2>
+            <ul class="unstyled-list ourtime">
+              <li class="ourtime__items">
+             <picture>
+            <source 
+                  media="screen and (max-width:480px)"
+                  srcset="images\1-M.jpg 1x ,images\1-Mx2.jpg 2x"
+              />
+              <source 
+                  media="screen and (max-width:767px)"
+                  srcset="images\1-T.jpg 1x , images\1-Tx2.jpg 2x"
+              />
+              <source 
+                  media="screen and (max-width:1200px)"
+                  srcset=" images\1-D.jpg 1x , images\1-Dx2.jpg 2x"
+              />
+              <img
+              width="270"
+              src="./images/1-M.jpg" 
+              alt="Christopher Walker"
+            />
+             </picture>
+                <h3 class="ourtime__names name">Christopher Walker</h3>
+                <p class="ourtime__ocupation">Product Designer</p>
+                <div class="ourtime__svg">
+                  <ul class="unstyled-list ourtime__svg-list">
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-instagram-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="16.25px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-twitter-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-facebook-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-linkedin-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="ourtime__items">
+              <picture>
+                <source 
+                media="screen and (max-width:480px)"
+                srcset=" images\2-M.jpg 1x ,images\2-Mx2.jpg 2x"
+                />
+                <source 
+                media="screen and (max-width:767px)"
+                srcset=" images\2-T.jpg 1x ,images\2-Tx2.jpg 2x"
+                />
+                <source 
+                media="screen and (max-width:1200px)"
+                srcset=" images\2-D.jpg 1x , images\2-Dx2.jpg 2x"
+                 />
+
+                <img
+                width="270"
+                src="./images/2-M.jpg"
+                alt="Kylie Evans"
+              />
+              </picture>
+                <h3 class="ourtime__names">Kylie Evans</h3>
+                <p class="ourtime__ocupation">Frontend Developer</p>
+                <div class="ourtime__svg">
+                  <ul class="unstyled-list ourtime__svg-list">
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-instagram-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="16.25px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-twitter-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-facebook-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-linkedin-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="ourtime__items">
+                <picture>
+                  <source 
+                  media="screen and (max-width:480px)"
+                  srcset=" images\3-M.jpg 1x , images\3-Mx2.jpg 2x"
+              />
+              <source 
+                  media="screen and (max-width:767px)"
+                  srcset=" images\3-T.jpg 1x , images\3-Tx2.jpg 2x"
+              />
+              <source 
+                  media="screen and (max-width:1200px)"
+                  srcset=" images\3-D.jpg 1x , images\3-Dx2.jpg 2x"
+              />
+                <img
+                  width="270"
+                  src="./images/3-M.jpg"
+                  alt="Ryan Harris"
+                />
+                </picture>
+                <h3 class="ourtime__names name">Ryan Harris</h3>
+                <p class="ourtime__ocupation">Marketing</p>
+                <div class="ourtime__svg">
+                  <ul class="unstyled-list ourtime__svg-list">
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-instagram-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="16.25px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-twitter-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-facebook-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-linkedin-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="ourtime__items">
+                <picture>
+
+                  <source 
+                  media="screen and (max-width:480px)"
+                  srcset="images\4-M.jpg 1x ,images\4-Mx2.jpg 2x"
+                  />
+                 <source 
+                  media="screen and (max-width:767px)"
+                  srcset="images\4-T.jpg 1x ,images\4-Tx2.jpg 2x"
+                    />
+                <source 
+                  media="screen and (max-width:1200px)"
+                  srcset="images\4-D.jpg 1x ,images\4-Dx2.jpg 2x"
+                />
+                <img
+                  width="270"
+                  src="./images/4-M.jpg"
+                  alt="Tyler Moore"
+                />
+                </picture>
+                <h3 class="ourtime__names name">Tyler Moore</h3>
+                <p class="ourtime__ocupation">UI Designer</p>
+                <div class="ourtime__svg">
+                  <ul class="unstyled-list ourtime__svg-list">
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-instagram-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="16.25px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-twitter-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-facebook-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="ourtime__backgrounds-icon" href="#">
+                        <svg width="20px" height="20px">
+                          <use
+                            href="./images/symbol-defs.svg#icon-linkedin-1"
+                          ></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!--Regular Customers-->
+        <section class="regular">
+          <div class="container-inner ">
+            <h2 class="regular__title">Regular Customers</h2>
+            <div class="regular__section">
+              <ul class="unstyled-list svg-section">
+                <li>
+                  <a class="svg-section__background" href="#">
+                    <svg height="46.7" width="41">
+                      <use href="./images/symbol-defs.svg#icon-group-5"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="svg-section__background" href="#">
+                    <svg height="52" width="42">
+                      <use href="./images/symbol-defs.svg#icon-group-1"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="svg-section__background" href="#">
+                    <svg height="41.18" width="43.46">
+                      <use href="./images/symbol-defs.svg#icon-group-2"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="svg-section__background" href="#">
+                    <svg height="40.62" width="84.44">
+                      <use href="./images/symbol-defs.svg#icon-group-3"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="svg-section__background" href="#">
+                    <svg height="62.54" width="62.54">
+                      <use href="./images/symbol-defs.svg#icon-group-4"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="svg-section__background" href="#">
+                    <svg height="43.93" width="93.79">
+                      <use href="./images/symbol-defs.svg#icon-group"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--Modal-header-->
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+          <svg height="18.66" width="18.66px"
+        
+          >
+            <use href="./images/symbol-defs.svg#icon-close"> </use>
+          </svg> 
+        </button>
+        <nav class="menu-mob">
+          <ul  class="unstyled-list menu-mob__list">
+            <li class="menu-mob__items">
+              <a class="menu-mob__link " href="./index.html">Studio</a>
+            </li>
+            <li class="menu-mob__items">
+              <a class="menu-mob__link" href="./portofolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="menu-mob__items">
+              <a class=" menu-mob__link" href="#">Contacts</a>
+            </li>
+          </ul>
+
+          <ul class="menu-mob2  unstyled-list">
+            <li class="menu-mob2__contact">
+              <a class="menu-mob2__tel" href="#">+1 212-772-4150</a>
+            </li>
+            <li class="menu-mob2__contact">
+              <a class="menu-mob2__mail" href="#">info@devstudio.com</a>
+            </li>
+            
+          </ul>
+        </nav>
+        <ul class="unstyled-list menu-mob3" >
+           <li ><a class="menu-mob3__items" href="/">Instagram</a></li> 
+           <li ><a class="menu-mob3__items" href="/">Twitter</a></li>
+           <li ><a class="menu-mob3__items" href="/">Facebook</a></li>
+           <li ><a class="menu-mob3__items"href="/">LinkedIn</a></li>
+      </ul>
+
+      </div>
+      <!--Footer-->
+      <footer class="footer-section">
+        <div class="container-inner">
+          <address class="footer-section__adress">
+            <div class="footer1">
+              <a class="footer1__logo" href="./index.html">Web</a>
+              <ul class="unstyled-list footer1__items">
+                <li>
+                  <a
+                    class="hover-part footer1__adress"
+                    href="695 Park Ave, NY 10065, USA"
+                    >695 Park Ave, NY 10065, USA</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover-part footer1__mail"
+                    href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a class="hover-part footer1__tel" href="tel:+12127724150"
+                    >+1 212-772-4150</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="footer2">
+              <h3 class="footer2__title">FIND US ON</h3>
+              <ul class="unstyled-list footer2__items">
+                <li>
+                  <a class="footer2__background-items" href="#">
+                    <svg hight="20" width="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-instagram-1"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer2__background-items" href="#">
+                    <svg hight="16.25" width="20">
+                      <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer2__background-items" href="#">
+                    <svg hight="20" width="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-facebook-1"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="footer2__background-items" href="#">
+                    <svg hight="20" width="20">
+                      <use
+                        href="./images/symbol-defs.svg#icon-linkedin-1"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+                <div class="footer3">
+                  <h3 class="footer3__title">Subscribe to the newsletter</h3>
+                  <form name="footer-form">
+                    <input class="footer-form__input" type="mail" name="mail-footer" placeholder="E-mail">
+                     <button  class="footer-botton"type="submit">Subscribe
+                      <svg  class="footer-botton__svg" width="24" height="24">
+                        <use href="./images/symbol-defs.svg#footer-icon"></use>
+                      </svg>
+                     </button>
+                  </form>
+                </div>
+            </div>
+          </address>
+        </div>
+      </footer>
+    </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+  </body>
+</html>
